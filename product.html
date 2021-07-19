@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     #data{
+         max-width: 80vw;
+         margin: auto;
+         display: grid;
+         grid-gap: 5px;
+         grid-template-columns: auto auto auto;
+     }
+     #data > div > img{
+         width: 100px;
+
+     }
+     #data > div{
+         background-color: aquamarine;
+         max-width: 200px;
+         text-align: center;
+         padding: 5px;
+     }
+     #data > div > img:hover{
+         width: 150px;
+     }
+     #cart{
+         max-width: 100px;
+         max-height: 40px;
+         margin: 20px auto;
+         
+     }
+     #cart > button{
+         background-color: red;
+         color: white;
+         width: 150px;
+         height: 40px;
+         border-radius: 10px;
+     }
+     
+    </style>
+</head>
+<body>
+     <button onclick="ltoh()">filter by price</button>
+    <div id="data"></div>
+    <div id="cart">
+        <button onclick="cart()">GO TO CART</button>
+    </div>
+    
+</body>
+</html>
+<script src="product.js">
+
+</script>

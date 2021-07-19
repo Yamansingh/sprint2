@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cart</title>
+    <style>
+          #box{
+              margin-left: 20px;
+              margin-top: 50px;
+              display: grid;
+              grid-template-columns: auto auto;
+
+          }
+          #count{
+              padding: 25px;
+              font-size: 40px;
+              color: green;
+          }
+          *{
+              margin: 0px;
+              padding: 0px;
+          }
+          img{
+              width: 100px;
+          }
+        #items{
+
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+  <div id="items"></div>
+  <div id="count">
+      <h3>Apply promocode masai30 and get 30% off</h3>
+      <input type="text" placeholder="apply promo" id="input">
+      <button onclick="Apply()">Apply promo</button>
+      <button onclick="checkout()">checkout</button>
+  </div>
+    </div>
+
+    
+</body>
+</html>
+<script src="carts.js"></script>

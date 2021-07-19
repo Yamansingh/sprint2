@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #address{
+            width: 200px;
+            margin:  10px auto;
+        }
+        #btn{
+            max-width: 200px;
+            margin: auto;
+
+        }
+        #btn > button{
+            background-color: yellowgreen;
+            color: white;
+            border: none;
+            height: 40px;
+            border-radius: 10px;
+        }
+        h2{
+            text-align: center;
+            color: rgb(0, 255, 76);
+        }
+    </style>
+</head>
+<body>
+     <h2>Enter your addres </h2>
+    <div id="address">
+        <form id="myadd" onsubmit="form(event)">
+            <input type="text" placeholder="pincode" id="pin">
+            <input type="text" placeholder="city" id="city">
+            <input type="text" placeholder="street" id="street">
+            <input type="submit">
+
+        </form>
+        
+    </div>
+    <div id="btn">
+        <button onclick="payment()"> go to payment page</button>
+    </div>
+</body>
+</html>
+<script>
+     function form(e){
+        e.prevantDefault
+        let form = document.getElementById("myadd")
+        let pin = document.getElementById("pin").value
+        let city = document.getElementById("city").value
+        let street = document.getElementById("street").value
+        let add = {
+            pin,
+            city,
+            street
+        }
+        let arr1;
+         arr1 = localStorage.getItem("addres")
+        if(arr1 == null){
+            arr1 = []
+        }
+        else{
+            arr1 = JSON.parse(arr1)
+        }
+        arr1.push(add)
+        localStorage.setItem("addres",JSON.stringify(arr1))
+        
+
+    }
+    function payment(){
+        window.location.href = "\ payment.html"
+    }
+   
+</script>
